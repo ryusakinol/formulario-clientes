@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>DATA SHELL</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+</head>
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+<body>
+      <!--Main Navigation-->
+  <header>
+    <style>
+      #intro {
+        background-image: url("./img/fondo.jpg");
+        height: 100vh;
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #intro {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand nav-link" href="index.html" id="home">
+        <strong>Home</strong></a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link move-scroll" href="#lista" rel="nofollow" >Formulario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link move-scroll" href="#contact" rel="nofollow" >Contacto</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav d-flex flex-row">
+            <!-- Icons -->
+            
+              <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="https://github.com/ryusakinol/" rel="nofollow" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="https://www.linkedin.com/in/alejandro-santos-estrella-777142208/" rel="nofollow" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
+
+     <!-- Background image -->
+     <div id="intro" class="bg-image shadow-2-strong">
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
+        <div class="container d-flex align-items-center justify-content-center text-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">DATA SHELL</h1>
+            <h4 class="mb-4">Sientete Confiado y Protegido con Nuestros Productos y Servicios</h4>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Background image -->
+
+  </header>
+  <header>
+    <div class="container">
+      <h1 class="titulo">Formulario</h1>
+    </div>
+  </header>	
+  
+  <div class="container">
+    <main class="client" >
+      <section >
+        <h2 class="change-2">Mis Clientes</h2>
+          <label for="filtrar-tabla"></label>
+          <table style="width: 100%;" class="tabla-g" id="lista">
+            <thead>
+              <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Telefono</th>
+              <th>Correo</th>
+              <th>Direccion</th>
+              <th>Compañia</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-clientes">
+              <tr class="cliente">
+                <td class="info-nombre">Pablo</td>
+                <td class="info-apellido">vargas</td>
+                <td class="info-Tel">8094784780</td>
+                <td class="info-correo">brayan@gmail.com</td>
+                <td class="info-direccion">C/ 6 # 35</td>
+                <td class="Compañia">Baldon</td>
+              </tr>
+              <tr class="cliente" >
+                <td class="info-nombre">Juan</td>
+                <td class="info-apellido">Marquez</td>
+                <td class="info-Tel">8094784780</td>
+                <td class="info-correo">matias10@gmail.com</td>
+                <td class="info-direccion">C/ J. Pablo Duarte #68</td>
+                <td class="Compañia">Coaspire</td>
+              </tr>    
+              <tr class="cliente" >
+                <td class="info-nombre">Erica</td>
+                <td class="info-apellido">Enrrique</td>
+                <td class="info-Tel">8094784780</td>
+                <td class="info-correo">ericaen@gmail.com</td>
+                <td class="info-direccion">C/ mateoII # 47</td>
+                <td class="Compañia">Altice</td>
+              </tr> 
+            </tbody>
+          </table>
+        </div>           
+      
+        </section>
+    </main>
+    <section class="container">
+      <h2 id="titulo-form" class="mt-5">Agregar nuevo Cliente</h2>
+           <ul id="mensaje-errores"></ul>
+      <form id="form-adicionar">
+        <div class="grupo">
+          <label for="nombre">Nombre:</label>
+          <input id="nombre" name="nombre" type="text" placeholder="digite el nombre del cliente" class="campo">
+        </div>
+        <div class="grupo">
+          <label for="apellido">Apellido:</label>
+          <input id="apellido" name="apellido" type="text" class="campo campo-medio">
+        </div>
+        <div class="grupo">
+          <label for="telefono">Telefono:</label>
+          <input id="telefono" name="telefono" type="text" class="campo">
+        </div>
+        <div class="grupo">
+          <label for="correo">Correo:</label>
+          <input id="correo" name="correo" type="text" class="campo">
+        </div>
+        <div class="grupo">
+          <label for="direccion">Direccion:</label>
+          <input id="direccion" name="direccion" type="text" class="campo">
+        </div>
+        <div class="grupo">
+          <label for="compañia">Compañia:</label>
+          <input id="compañia" name="compañia" type="text" class="campo">
+        </div>
+        <button id="adicionar-cliente" class="boton bto-principal">Agregar</button>
+      </form>
+    </section>
+
+  <hr class="my-5" />
+  
+  <!--Footer-->
+  <footer class="bg-dark pt-3 text-white text-lg-start">
+      <h3 class="text-center">Contacto</h3>
+    <div id="contact" class="text-center py-4 align-items-center">
+      <p>Social Network</p>
+    
+      <a href="https://www.linkedin.com/in/alejandro-santos-estrella/" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      
+      <a href="https://github.com/ryusakinol/" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="#home" class="move-scroll btn btn-primary m-1" role="button" rel="nofollow" >
+        <i class="fas fa-home"></i>
+      </a>
+    </div>
+
+    <!-- Custom scripts -->
+		<script src="form.js"></script>	
+</body>
+</html>
